@@ -1,4 +1,7 @@
-# Predicting Bodily Injury Claim Severity
+# Infinite Actuary : Technical Skills Course
+# Predictive Analytics with Python
+
+## Predicting Bodily Injury Claim Severity
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/winutta/Predictive-Analytics-with-Python-Final-Project/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
 

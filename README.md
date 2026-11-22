@@ -1,6 +1,6 @@
 # Predicting Bodily Injury Claim Severity
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/YOUR-REPO/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/winutta/Predictive-Analytics-with-Python-Final-Project/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
 
 Final project for *Predictive Analytics in Python*. The goal is to predict the dollar cost of an auto bodily-injury claim from policyholder and vehicle characteristics, using generalized linear models (GLMs) and comparing them against a decision tree.
 

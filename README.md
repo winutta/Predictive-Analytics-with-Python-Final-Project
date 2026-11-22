@@ -1,10 +1,10 @@
 # Predicting Bodily Injury Claim Severity
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/YOUR-REPO/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/winutta/Predictive-Analytics-with-Python-Final-Project/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
 
 Final project for *Predictive Analytics in Python*. The goal is to predict the dollar cost of an auto bodily-injury claim from policyholder and vehicle characteristics, using generalized linear models (GLMs) and comparing them against a decision tree.
 
-**TL;DR**
+**Highlights**
 
 - **Driver age is the dominant signal.** Claim cost falls steeply from age 17 to about 27, then stays roughly flat with a slight upward drift.
 - **Individual claims are very noisy.** Every row-level model explains only about 4–5% of the variation (pseudo R² ≈ 0.05), and test RMSE is about \$13.8k–\$14.2k for all four models.
@@ -47,7 +47,6 @@ Final project for *Predictive Analytics in Python*. The goal is to predict the d
 | `YearsOwned` | Years the main driver has owned the vehicle | Numeric |
 | `Claims` | Number of people injured in the accident | Numeric |
 
-> The CSV is not included in this repository. Place `auto_claims.csv` in the same folder as the notebook before running it.
 
 ## Approach
 
@@ -112,7 +111,6 @@ Predictors were pruned using coefficient p-values and **likelihood ratio tests**
 - **`YearsOwned`** is not significant in any case (LRT p ≈ 0.89 for Gaussian identity, 0.71 for Gaussian log). It was dropped.
 - **`CreditNum`** is borderline in the identity-link model (p ≈ 0.054) and significant in the log-link LRT (p ≈ 0.006). It was dropped for simplicity and consistency across models.
 - After dropping both, every remaining term is significant. `MaritalStatus` has the smallest LRT statistic of those left, so it is the next candidate for removal.
-- For the **Inverse Gaussian** model, several LRT statistics came out negative. A reduced model cannot truly fit better than the full one, so those results are unreliable (likely convergence issues). The p-values of 1.0 on those rows should not be read as evidence that the terms are irrelevant.
 
 ## What the GLM says
 
@@ -179,7 +177,7 @@ The simplified averaged model keeps just `Year + Drivers + AgeHigh + AgeLow`. Pr
 
 **Limitations and ideas for future work**
 
-- Only main effects were used. No interaction terms, polynomial terms, or splines were tested.
+- Only main effects were used. No interaction terms, polynomial terms, or other transformed predictors were used.
 - Only a depth-10 tree was fit. A pruned tree, grid search, or a gradient-boosted model might do better, and the holdout set is still available for a final check.
 - The Inverse Gaussian LRTs were numerically unreliable.
 - `MaritalStatus` and `Credit` are coded as ordered integers, which imposes an ordering the categories may not have. One-hot encoding would be cleaner.
@@ -187,12 +185,8 @@ The simplified averaged model keeps just `Year + Drivers + AgeHigh + AgeLow`. Pr
 
 ## Reproducing this project
 
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-cd YOUR-REPO
-pip install -r requirements.txt
-# place auto_claims.csv next to the notebook, then:
-jupyter notebook Predictive_Analytics_in_Python_Final_Project.ipynb
+```
+Copy the the project into Colab and run.
 ```
 
 **Tools:** `statsmodels` (GLMs, likelihood ratio tests), `scikit-learn` (train/test split, decision tree, R²), `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`.

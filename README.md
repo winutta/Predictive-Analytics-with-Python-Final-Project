@@ -4,7 +4,7 @@
 
 Final project for *Predictive Analytics in Python*. The goal is to predict the dollar cost of an auto bodily-injury claim from policyholder and vehicle characteristics, using generalized linear models (GLMs) and comparing them against a decision tree.
 
-**TL;DR**
+**Highlights**
 
 - **Driver age is the dominant signal.** Claim cost falls steeply from age 17 to about 27, then stays roughly flat with a slight upward drift.
 - **Individual claims are very noisy.** Every row-level model explains only about 4–5% of the variation (pseudo R² ≈ 0.05), and test RMSE is about \$13.8k–\$14.2k for all four models.

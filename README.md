@@ -1,11 +1,13 @@
 # Infinite Actuary : Technical Skills Course
 # Predictive Analytics with Python
+### Work Completed by Will Nutter
+
 
 ## Predicting Bodily Injury Claim Severity
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/winutta/Predictive-Analytics-with-Python-Final-Project/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
 
-Final project for *Predictive Analytics in Python*. The goal is to predict the dollar cost of an auto bodily-injury claim from policyholder and vehicle characteristics, using generalized linear models (GLMs) and comparing them against a decision tree.
+This is the Final project for *Predictive Analytics in Python*. The goal is to predict the dollar cost of an auto bodily-injury claim from policyholder and vehicle characteristics, using generalized linear models (GLMs) and comparing them against a decision tree. This project is meant to simulate evaluating claims data and fitting a useful model for analysis. 
 
 **Highlights**
 
@@ -34,6 +36,7 @@ Final project for *Predictive Analytics in Python*. The goal is to predict the d
 ## Data
 
 `auto_claims.csv` contains **250,000 policy records (2017–2021)**. There are no missing values.
+This dataset is given as part of the course, and is intended to simulate what "real-life" claims data might look like. 
 
 | Variable | Definition | Type |
 |---|---|---|

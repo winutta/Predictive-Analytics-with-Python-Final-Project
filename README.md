@@ -1,9 +1,10 @@
-# Infinite Actuary : Technical Skills Course
-# Predictive Analytics with Python
-### Work Completed by Will Nutter
-
-
 ## Predicting Bodily Injury Claim Severity
+
+### Work by `Will Nutter`
+### Project is completed as part of the `Technical Skills Course` from `Infinite Actuary`
+### `Predictive Analytics with Python` Subsection
+
+**You can follow along and inspect the code in Colab.**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/winutta/Predictive-Analytics-with-Python-Final-Project/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
 

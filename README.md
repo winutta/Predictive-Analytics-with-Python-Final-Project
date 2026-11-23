@@ -2,13 +2,23 @@
 
 ### Work by `Will Nutter`
 ### Project is completed as part of the `Technical Skills Course` from `Infinite Actuary`
-### `Predictive Analytics with Python` Subsection
+
+#### This Course Covers these Subsections:
+ Microsoft Excel
+ 
+ Excel VBA
+ 
+ SQL (with Access)
+ 
+ Predictive Analytics in Python
+ 
+## This is the final project for the `Predictive Analytics with Python` Subsection
 
 **You can follow along and inspect the code in Colab.**
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/winutta/Predictive-Analytics-with-Python-Final-Project/blob/main/Predictive_Analytics_in_Python_Final_Project.ipynb)
 
-This is the Final project for *Predictive Analytics in Python*. The goal is to predict the dollar cost of an auto bodily-injury claim from policyholder and vehicle characteristics, using generalized linear models (GLMs) and comparing them against a decision tree. This project is meant to simulate evaluating claims data and fitting a useful model for analysis. 
+This is the Final project for `Predictive Analytics in Python`. The goal is to `predict` the dollar cost of an auto `bodily-injury claim` from policyholder and vehicle characteristics, using generalized linear models (`GLMs`) and comparing them against a decision tree. Models are evaluated and interpreted to understand how predictors effect claims. This project is meant to simulate evaluating claims data and fitting a useful model for analysis. 
 
 **Highlights**
 

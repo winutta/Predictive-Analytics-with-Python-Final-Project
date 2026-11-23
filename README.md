@@ -12,7 +12,7 @@
  
  Predictive Analytics in Python
  
-## This is the final project for the `Predictive Analytics with Python` Subsection
+## This is the final project for the `Predictive Analytics in Python` Subsection
 
 **You can follow along and inspect the code in Colab.**
 

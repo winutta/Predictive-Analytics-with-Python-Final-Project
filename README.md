@@ -191,6 +191,7 @@ The simplified averaged model keeps just `Year + Drivers + AgeHigh + AgeLow`. Pr
 - Age is the strongest predictor of claim severity, especially below 27. GLMs and trees agree on this.
 - The Gaussian log-link GLM is the preferred model: lowest RMSE, positive predictions, and interpretable coefficients.
 - Models like these are useful for understanding **how predictors shift expected cost**, but not for forecasting any single claim.
+- Aggregation can be used here to achieve a stronger model fit and prediction score. However, this changes the target variable meaning to the group average rather than individual claims.
 
 **Limitations and ideas for future work**
 
@@ -198,7 +199,6 @@ The simplified averaged model keeps just `Year + Drivers + AgeHigh + AgeLow`. Pr
 - Only a depth-10 tree was fit. A pruned tree, grid search, or a gradient-boosted model might do better, and the holdout set is still available for a final check.
 - The Inverse Gaussian LRTs were numerically unreliable.
 - `MaritalStatus` and `Credit` are coded as ordered integers, which imposes an ordering the categories may not have. One-hot encoding would be cleaner.
-- Averaging into 64-row blocks (grouping on `Age`) improves fit by changing what is being predicted, so the aggregated results should not be read as a better individual-claim model.
 
 ## Reproducing this project
 

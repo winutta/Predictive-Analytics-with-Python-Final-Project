@@ -115,9 +115,13 @@ The Gaussian log-link GLM has the lowest RMSE, and it also guarantees positive p
 
 The predictions stay inside a narrow band (roughly \$5k–\$35k) while actual claims run past \$250k, so large claims fall far below the diagonal:
 
+**Gaussian with Identity Link**
+
 ![Predicted vs. actual, row-level model](images/03_row_level_pred_vs_actual.png)
 
-The residuals are heavily right-skewed. The Q-Q plot shows a long upper tail that a Gaussian family does not capture:
+**Gaussian with Log Link**
+
+The residuals are heavily right-skewed. The Q-Q plot shows a long upper tail that a Gaussian family does not capture even with the log link:
 
 ![Residual diagnostics, Gaussian log-link GLM](images/04_residual_diagnostics.png)
 
@@ -175,7 +179,7 @@ Since row-level claims are so noisy, can we recover the signal by averaging? Tra
 | Metric | Row-level GLM | Averaged GLM |
 |---|---|---|
 | Pseudo R² (train) | ~0.05 | **~0.89** |
-| Test R² | n/a | **0.74** (train R² 0.69) |
+| Test R² | 0.06 (train R² 0.05) | **0.74** (train R² 0.69) |
 | Test RMSE | \$13,846 | \$1,722 |
 
 The simplified averaged model keeps just `Year + Drivers + AgeHigh + AgeLow`. Predictions now cluster along the diagonal, including the steep rise at the high end:
@@ -209,7 +213,7 @@ The simplified averaged model keeps just `Year + Drivers + AgeHigh + AgeLow`. Pr
 ## Reproducing this project
 
 ```
-Copy the the project into Colab and run.
+Click the "Open in Colab" button at the top. Also, you can copy the python notebook and run it however you like.
 ```
 
 **Tools:** `statsmodels` (GLMs, likelihood ratio tests), `scikit-learn` (train/test split, decision tree, R²), `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`.

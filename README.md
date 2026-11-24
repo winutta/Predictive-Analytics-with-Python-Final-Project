@@ -193,6 +193,12 @@ The simplified averaged model keeps just `Year + Drivers + AgeHigh + AgeLow`. Pr
 - Models like these are useful for understanding **how predictors shift expected cost**, but not for forecasting any single claim.
 - Aggregation can be used here to achieve a stronger model fit and prediction score. However, this changes the target variable meaning to the group average rather than individual claims.
 
+**Impactful GLM Results for predicting Bodily Injury:**
+
+`AgeLow	~13% higher for each year younger than 27`
+
+`Sex (M = 1)	~24% higher for males`
+
 **Limitations and ideas for future work**
 
 - Only main effects were used. No interaction terms, polynomial terms, or other transformed predictors were used.
